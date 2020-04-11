@@ -19,7 +19,7 @@ const galleryItems = [
   },
   {
     id: 4,
-    path: "images/dogs.jpg",
+    path: "images/dogs2.jpg",
     description: "I Love Dogs!!!",
     likes: 0,
   },

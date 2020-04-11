@@ -20,7 +20,7 @@ class App extends Component {
 
   getMyImages() {
     axios
-      .get("/images")
+      .get("/gallery")
       .then((response) => {
         this.setState({
           myImageList: [...response.data],

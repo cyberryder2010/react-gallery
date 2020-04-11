@@ -19,23 +19,15 @@ class App extends Component {
   }
 
   getMyImages() {
-    axios({
-      method: "GET",
-      url: "/gallery",
-    })
+    axios
+      .get("/images")
       .then((response) => {
-        console.log("Server Response:", response.data);
-        this.setState(
-          {
-            myImageList: [...response.data],
-          },
-          () => {
-            console.log("My Gallery", this.state.myImageList);
-          }
-        );
+        this.setState({
+          myImageList: [...response.data],
+        });
       })
       .catch((err) => {
-        alert("Oops. Please try again later.");
+        alert("Oops");
       });
   }
 

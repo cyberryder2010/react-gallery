@@ -1,26 +1,26 @@
 const galleryItems = [
   {
     id: 1,
-    path: "images/goat_small.jpg",
-    description: "Photo of a goat taken at Glacier National Park.",
+    path: "images/Motto.jpg",
+    description: "Always Inspire Yourself",
     likes: 0,
   },
   {
     id: 2,
-    path: "images/Monkeys.jpeg",
-    description: "a couple of perplexed Monkeys",
-    likes: 0,
-  },
-  {
-    id: 3,
     path: "images/navy.jpg",
     description: "Me in the Navy",
     likes: 0,
   },
   {
-    id: 4,
-    path: "images/dogs2.jpg",
+    id: 3,
+    path: "images/dogs3.jpg",
     description: "I Love Dogs!!!",
+    likes: 0,
+  },
+  {
+    id: 4,
+    path: "images/Jeeptent.jpg",
+    description: "Living the Dream!!!",
     likes: 0,
   },
   {
@@ -43,14 +43,14 @@ const galleryItems = [
   },
   {
     id: 8,
-    path: "images/MyPat.jpg",
-    description: "Grown up Monkeys",
+    path: "images/mudPat.jpg",
+    description: "My Heroes...",
     likes: 0,
   },
   {
     id: 9,
-    path: "images/Jeeptent.jpg",
-    description: "Living the Dream!!!",
+    path: "images/mudMyron.jpg",
+    description: "....my Sons!!!",
     likes: 0,
   },
 ];

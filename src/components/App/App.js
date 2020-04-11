@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
+import GalleryList from "../GalleryList/GalleryList";
 
 class App extends Component {
   state = {
-    newAnimal: {
+    myImage: {
       id: 0,
       path: "",
       description: "",
@@ -23,20 +24,17 @@ class App extends Component {
       url: "/gallery",
     })
       .then((response) => {
-        // update state with server data
         console.log("Server Response:", response.data);
-        // store songs in local state
         this.setState(
           {
             myImageList: [...response.data],
           },
           () => {
-            console.log("Animals", this.state.myImageList);
+            console.log("My Gallery", this.state.myImageList);
           }
         );
       })
       .catch((err) => {
-        // surface error message to user
         alert("Oops. Please try again later.");
       });
   }
@@ -47,9 +45,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <br />
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg" />
+        <h2>My Gallery</h2>
+        <GalleryList myImageList={this.state.myImageList} />
       </div>
     );
   }

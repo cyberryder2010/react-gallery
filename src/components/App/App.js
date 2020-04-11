@@ -22,14 +22,31 @@ class App extends Component {
     axios
       .get("/gallery")
       .then((response) => {
-        this.setState({
-          myImageList: [...response.data],
-        });
+        this.setState(
+          {
+            myImageList: [...response.data],
+          },
+          () => {
+            console.log(this.state);
+          }
+        );
       })
       .catch((err) => {
         alert("Oops");
       });
   }
+
+  addLikes = (id) => (event) => {
+    console.log(id);
+    axios
+      .put(`/gallery/like/${id}`)
+      .then((response) => {
+        this.getMyImages();
+      })
+      .catch((err) => {
+        alert("Oops");
+      });
+  };
 
   render() {
     return (
@@ -38,7 +55,10 @@ class App extends Component {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <h2>My Gallery</h2>
-        <GalleryList myImageList={this.state.myImageList} />
+        <GalleryList
+          myImageList={this.state.myImageList}
+          addLikes={this.addLikes}
+        />
       </div>
     );
   }

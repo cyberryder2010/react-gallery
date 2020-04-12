@@ -48,17 +48,19 @@ class App extends Component {
       });
   };
 
+  //need to toggle between image and description on click
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <h2>My Gallery</h2>
-        <GalleryList
-          myImageList={this.state.myImageList}
-          addLikes={this.addLikes}
-        />
+        <div className="toggleBox">
+          <GalleryList
+            myImageList={this.state.myImageList}
+            addLikes={this.addLikes}
+          />
+        </div>
       </div>
     );
   }

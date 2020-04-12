@@ -55,7 +55,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <div className="toggleBox">
+        <div>
           <GalleryList
             myImageList={this.state.myImageList}
             addLikes={this.addLikes}
